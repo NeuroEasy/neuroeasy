@@ -34,7 +34,7 @@ Basta seguir os comandos do git abaixo para baixar a aplicação NeuroEasy ou [c
 Siga os passos abaixo ordenamente para o funcionamento do NeuroEasy na máquina:
 
 * Importe o modelo do banco de dados ([db_neuroeasy.sql](https://github.com/NeuroEasy/neuroeasy/blob/master/sql/db_neuroeasy.sql)) para o seu servidor;
-* No arquivo [database.php](https://github.com/NeuroEasy/neuroeasy/blob/master/app/Config/database.php) inserir adequadamente de acordo com os acessos do seu banco de dados:
+* No arquivo [database.php](https://github.com/NeuroEasy/neuroeasy/blob/master/app/Config/database.php) inserir adequadamente de acordo com os acessos do seu banco de dados. Veja abaixo o código:
 
 ```php
 	public $default = array(
@@ -49,7 +49,7 @@ Siga os passos abaixo ordenamente para o funcionamento do NeuroEasy na máquina:
 	);
 ```
 
-* No arquivo [bootstrap.php](https://github.com/NeuroEasy/neuroeasy/blob/master/app/Config/bootstrap.php) informar na variável $url o link de onde NeuroEasy será acessado:
+* No arquivo [bootstrap.php](https://github.com/NeuroEasy/neuroeasy/blob/master/app/Config/bootstrap.php) deve-se informar na variável $url o diretório de onde a aplicação NeuroEasy será acessado no browser. Veja abaixo o código:
 
 ```php
 /**
@@ -60,7 +60,7 @@ Configure::write('sistema_url', $url.'/sistema/');
 ```
 
 ###Opcional
-* Caso seja necessário e estiver treinando uma rede grande, precisará aumentar o tempo de execução e de mémoria no PHP. Para facilitar a sua vida basta você configurar essas informações no próprio arquivo do [BackPropagationComponent.php](https://github.com/NeuroEasy/neuroeasy/blob/master/app/Plugin/NeuralNetwork/Controller/Component/BackPropagationComponent.php):
+* Caso seja necessário e estiver treinando uma rede grande, precisará aumentar o tempo de execução e de mémoria no PHP. Para facilitar a sua vida basta você configurar essas informações no próprio arquivo do [BackPropagationComponent.php](https://github.com/NeuroEasy/neuroeasy/blob/master/app/Plugin/NeuralNetwork/Controller/Component/BackPropagationComponent.php). Veja abaixo o código:
 
 
 ```php
