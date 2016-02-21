@@ -59,8 +59,7 @@ Configure::write('sistema_url', $url.'/sistema/');
 
 ###Opcional
 * Caso seja necessário e estiver treinando uma rede grande, precisará aumentar o tempo de execução e de mémoria no PHP. Para facilitar a sua vida basta você configurar essas informações no próprio arquivo do [BackPropagationComponent.php](https://github.com/NeuroEasy/neuroeasy/blob/master/app/Plugin/NeuralNetwork/Controller/Component/BackPropagationComponent.php):
-<<<<<<< HEAD
-=======
+
 
 ```php
 <?php
