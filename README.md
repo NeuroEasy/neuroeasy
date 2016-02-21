@@ -71,7 +71,7 @@ set_time_limit(3600);
 
 #Bônus
 
-##DataSets
+##Datasets
 
 Separamos alguns exemplos de conjunto de dados do mundo real dentro da pasta [datasets](https://github.com/NeuroEasy/neuroeasy/tree/master/datasets) para realizar alguns testes no NeuroEasy e adquirir o conhecimento de como deve ser o formato do arquivo para a importação dos dados e realizar o treinamento da rede.
 
