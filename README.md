@@ -21,18 +21,18 @@ ou instale um pacote no qual contêm todos esses componentes como [xampp](https:
 
 ##Download
 
-Basta seguir os comandos do git abaixo para baixar a aplicação NeuroEasy ou [clique aqui](https://github.com/thomaskanzig/NeuroEasy/archive/master.zip) para baixar o zip:
+Basta seguir os comandos do git abaixo para baixar a aplicação NeuroEasy ou [clique aqui](https://github.com/NeuroEasy/neuroeasy/archive/master.zip) para baixar o zip:
 
 ####Com git clone
 
-	git clone git://github.com/thomaskanzig/NeuroEasy.git NeuroEasy
+	git clone git://github.com/NeuroEasy/neuroeasy.git NeuroEasy
 
 ##Configuração
 
 Siga os passos abaixo ordenamente para o funcionamento do NeuroEasy na máquina:
 
-* Importe o modelo do banco de dados ([db_neuroeasy.sql](https://github.com/thomaskanzig/NeuroEasy/blob/master/sql/db_neuroeasy.sql)) para o seu servidor;
-* No arquivo [database.php](https://github.com/thomaskanzig/NeuroEasy/blob/master/app/Config/database.php) inserir adequadamente de acordo com os acessos do seu banco de dados:
+* Importe o modelo do banco de dados ([db_neuroeasy.sql](https://github.com/NeuroEasy/neuroeasy/blob/master/sql/db_neuroeasy.sql)) para o seu servidor;
+* No arquivo [database.php](https://github.com/NeuroEasy/neuroeasy/blob/master/app/Config/database.php) inserir adequadamente de acordo com os acessos do seu banco de dados:
 
 ```php
 	public $default = array(
@@ -47,7 +47,7 @@ Siga os passos abaixo ordenamente para o funcionamento do NeuroEasy na máquina:
 	);
 ```
 
-* No arquivo [bootstrap.php](https://github.com/thomaskanzig/NeuroEasy/blob/master/app/Config/bootstrap.php) informar na variável $url o link de onde NeuroEasy será acessado:
+* No arquivo [bootstrap.php](https://github.com/NeuroEasy/neuroeasy/blob/master/app/Config/bootstrap.php) informar na variável $url o link de onde NeuroEasy será acessado:
 
 ```php
 /**
@@ -58,7 +58,7 @@ Configure::write('sistema_url', $url.'/sistema/');
 ```
 
 ###Opcional
-* Caso seja necessário e estiver treinando uma rede grande, precisará aumentar o tempo de execução e de mémoria no PHP. Para facilitar a sua vida basta você configurar essas informações no próprio arquivo do [BackPropagationComponent.php](https://github.com/thomaskanzig/NeuroEasy/blob/master/app/Plugin/NeuralNetwork/Controller/Component/BackPropagationComponent.php):
+* Caso seja necessário e estiver treinando uma rede grande, precisará aumentar o tempo de execução e de mémoria no PHP. Para facilitar a sua vida basta você configurar essas informações no próprio arquivo do [BackPropagationComponent.php](https://github.com/NeuroEasy/neuroeasy/blob/master/app/Plugin/NeuralNetwork/Controller/Component/BackPropagationComponent.php):
 <<<<<<< HEAD
 =======
 
