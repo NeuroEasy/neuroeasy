@@ -1,7 +1,7 @@
 
 [![NeuroEasy](http://thomaskanzig.com/dev/neuro-easy/img/neuro-easy.png)](http://thomaskanzig.com/dev/neuro-easy/)
 
-### NeuroEasy - Ambiente de aprendizagem em Redes Neurais Artificiais
+### NeuroEasy - Ambiente de aprendizagem em Redes Neurais Artificiais RNA's
 
 A NeuroEasy é um ferramenta web no qual tem como objetivo principal ao apoio de ensino em redes neurais. Promete simplificar o método de configuração da sua rede neural para se chegar ao aprendizado e generalização dos dados.
 
