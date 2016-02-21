@@ -7,6 +7,8 @@ A NeuroEasy é um ferramenta web no qual tem como objetivo principal ao apoio de
 
 Essa ferramenta obtive origem acadêmico de conclusão da graduação do curso de Sistemas de Informação no Instituto Federal de Alagoas (IFAL) do campus Maceió, pelos alunos [Thomas Kanzig](https://www.facebook.com/thomas.kanzig) e [Emerson Gomes](https://www.facebook.com/emersonpgomes) com a orientação do [Profº. Msc. Edison Camilo Morais](https://www.facebook.com/edison.camilo.56). 
 
+Acesse a versão [Demo](http://thomaskanzig.com/dev/neuro-easy/)
+
 #Instalação
 
 ##Requisitos
@@ -67,5 +69,11 @@ ini_set('memory_limit', '1100M');
 set_time_limit(3600);
 ```
 
+#Bônus
 
+##DataSets
+
+Separamos alguns exemplos de conjunto de dados do mundo real dentro da pasta [datasets](https://github.com/NeuroEasy/neuroeasy/tree/master/datasets) para realizar alguns testes no NeuroEasy e adquirir o conhecimento de como deve ser o formato do arquivo para a importação dos dados e realizar o treinamento da rede.
+
+Outros dados você pode conferir no repositório [UCI - Machine Learning Repository](http://archive.ics.uci.edu/ml/) e adquira mais conhecimento ;)
 
