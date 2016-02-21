@@ -67,13 +67,6 @@ Configure::write('sistema_url', $url.'/sistema/');
 ini_set('memory_limit', '1100M'); 
 set_time_limit(3600);
 ```
->>>>>>> 080cbf4e30cb6e93817456c16f1be470d6e77d8a
-
-```php
-<?php
-ini_set('memory_limit', '1100M'); 
-set_time_limit(3600);
-```
 
 
 
