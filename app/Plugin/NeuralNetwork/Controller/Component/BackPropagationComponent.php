@@ -4,7 +4,14 @@ ini_set('memory_limit', '1100M');
 set_time_limit(3600);
 
 /*
-* Classe Backpropagation made by Thomas Kanzig (TK) thomaskanzig.com - 2015
+* Classe Backpropagation feito pelo autor Thomas Kanzig (TK) no qual toda operação MLP 
+* e do algoritmo backpropagation está escrito aqui. Dúvidas? Mande seu contato
+* nesse email: thomas.kanzig@gmail.com
+*
+* Class Backpropagation made by the author Thomas Kanzig (TK) in which all MLP operation 
+* and backpropagation algorithm is written here. Questions? Send your contact in
+* this email: thomas.kanzig@gmail.com
+*
 */
 
 App::uses('PrintCalculation', 'NeuralNetwork.Lib'); 
@@ -142,21 +149,6 @@ class BackPropagationComponent extends Component {
     	//Initializing weights (weight and bias)
     	$this->initializing_weights();
 
-
-	    //Save info in a file
-	    //Util::saveDataExport("INICIAIS - Pesos na entrada: ".var_export($this->wEntrada, true)."Pesos na oculta: ".var_export($this->wOculta, true)."Pesos dos bias: ".var_export($this->bias, true));
-
-	    /*
-    	if($this->showDescription){
-	    	echo "<br/>Entradas:<br/>";
-	    	var_dump($this->dataInputs);
-	    	echo "<br/>Desejadas:<br/>";
-	    	var_dump($this->dataOutputs);
-	    	//die();
-    	}
-    	*/
-
-    	//var_dump($this->dataOutputs); die();
     	$epochs = $this->epochs;
 		$store_epoch=0;
 
@@ -189,9 +181,6 @@ class BackPropagationComponent extends Component {
 
     	$this->epochs_executed = ($epoch-1); //Store which epochs was executed
 
-	    //Save info in a file
-	    //Util::saveDataExport("FINAIS - Pesos na entrada: ".var_export($this->wEntrada, true)."Pesos na oculta: ".var_export($this->wOculta, true)."Pesos dos bias: ".var_export($this->bias, true));
-
     	//Stop the time counter
     	$time_finish = new DateTime('now');
 
@@ -200,17 +189,6 @@ class BackPropagationComponent extends Component {
 
 		$this->weightsFinal = ["hidden_to_input" => $this->wEntrada, "output_to_hidden" => $this->wOculta, "bias_of_each_neuron" => $this->bias];	
 
-		/*
-		echo "<br/>Pesos Novos:<br/>";
-		print_r($this->weightsFinal);
-		echo "<br/>EQM TOTAL: ".$this->errorMeasures['eqm-total']['train'][$epoch-1];
-
-		echo "<br/>Regressão<br/>";
-		print_r($this->errorMeasures);
-		//die();
-		*/
-
-		//echo PrintCalculation::getPreHtml(); die();
 	}	
 
     /*
@@ -341,12 +319,6 @@ class BackPropagationComponent extends Component {
 		
 		$count_total = count($this->dataOutputs["values"]["all"]["desnormalized"][0]);
 
-		/*
-		echo "Total: ",$count_total; echo "<br/>";
-		echo "Select: ",$count_select_train; echo "<br/>";
-		echo "not Select: ",$count_not_select; echo "<br/><br/>";
-		*/
-
 		//Select random the keys from inputs/outputs for train - Start
 		//echo (($count_total/100)*$this->percentageToTrain); echo "-";
 		$count_select_train = round((($count_total/100)*$this->percentageToTrain), 0);
@@ -435,20 +407,9 @@ class BackPropagationComponent extends Component {
 			}
 			//Create params from outputs 'validation' - End
 
-			//echo "Depois:"; var_dump($this->keys_selected); echo "<br/>"; die();
-
 			//Select random the keys from inputs/outputs for valitation - End  
-
 			$this->countTotalSamples["validation"] = $count_select_validation;	
-		}
-
-		/*
-		//Calculate the media from all outputs, included separatly (treined and validated)
-		foreach($this->dataOutputs["values"]["train"]["desnormalized"] as $values){
-			
-			$this->dataOutputs["values"]["train"]["desnormalized"] = Util::calculateMedia($values);										
-		}
-		*/		
+		}	
 		
 		//Count total of neurons in this neural network topology
 		$this->countNeuronsTotal = ($this->countNeuronsHiddenLayer+$this->countNeuronsOutputLayer);
@@ -594,15 +555,6 @@ class BackPropagationComponent extends Component {
 		if($this->showDescription){ 
 		   	PrintCalculation::setHtml("<br/></div></div>", "fase-1", "passo-3");
 		}
-			
-		//Save a file all the data normalized
-		/*if($normalize){
-			ConvertData::SaveFileMBP($this->dataInputs, $this->dataOutputs, true, array("filename" => "mbp_datasets_normalized","type_values" => "normalized"));
-		} 
-		die();
-		*/
-		
-		//debug($this->dataOutputs);	
 					
 	}	
 
@@ -856,16 +808,6 @@ class BackPropagationComponent extends Component {
 	   		}
 	   }
 
-
-	   /*
-	   echo $html;
-	   echo "<br/>";
-	   echo "Deltas";
-	   echo "<br/>";	
-	   debug($this->deltaNovo);
-	   debug($this->deltaDaSaidaNovo);
-	   */
-
 		if($this->showDescription){ 
 			PrintCalculation::setHtml($html, "fase-2", "passo-2", "epoca-{$epoch}-amostra-".($sample+1)."-".$type_data,$this->orderStep);
 		}
@@ -929,15 +871,6 @@ class BackPropagationComponent extends Component {
 		$this->wEntrada = $wEntrada;
 		$this->wOculta = $wOculta;
 		$this->bias = $bias;
-
-		/*
-		echo "<br/>";
-		echo "New Weights:";
-		echo "<br/>";
-		debug($this->wEntrada);
-		debug($this->wOculta);
-		debug($this->bias);
-		*/
 		
  		if($this->showDescription){
  			$html .= "</div> 
