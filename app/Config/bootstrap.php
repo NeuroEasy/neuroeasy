@@ -122,4 +122,5 @@ CakePlugin::load('NeuralNetwork', array('routes' => true));
 
 $url = "http://localhost/neuro-easy";
 
+Configure::write('site_url', $url.'/');
 Configure::write('sistema_url', $url.'/sistema/');
