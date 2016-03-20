@@ -56,6 +56,8 @@ Siga os passos abaixo ordenamente para o funcionamento do NeuroEasy na máquina:
  * Configure de site_url and sistema_url
  */
 $url = "http://localhost/neuro-easy";
+
+Configure::write('site_url', $url.'/');
 Configure::write('sistema_url', $url.'/sistema/');
 ```
 * Na diretório [app/webroot/files/](https://github.com/NeuroEasy/neuroeasy/tree/master/app/webroot/files), as pastas devem estar com a permissão liberada com código de permissão 0777
