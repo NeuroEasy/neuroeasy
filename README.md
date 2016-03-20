@@ -58,7 +58,7 @@ Siga os passos abaixo ordenamente para o funcionamento do NeuroEasy na máquina:
 $url = "http://localhost/neuro-easy";
 Configure::write('sistema_url', $url.'/sistema/');
 ```
-* Na diretório [app/webroot/files/](https://github.com/NeuroEasy/neuroeasy/tree/master/app/webroot/files) as permissões das pastas devem estar com a permissão liberada, com código de permissão 0777
+* Na diretório [app/webroot/files/](https://github.com/NeuroEasy/neuroeasy/tree/master/app/webroot/files), das pastas devem estar com a permissão liberada com código de permissão 0777
 
 ###Opcional
 * Caso seja necessário e estiver treinando uma rede grande, precisará aumentar o tempo de execução e de mémoria no PHP. Para facilitar a sua vida basta você configurar essas informações no próprio arquivo do [BackPropagationComponent.php](https://github.com/NeuroEasy/neuroeasy/blob/master/app/Plugin/NeuralNetwork/Controller/Component/BackPropagationComponent.php). Veja abaixo o código:
